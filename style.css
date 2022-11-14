@@ -1,0 +1,89 @@
+#everything {
+    padding: 50px;
+}
+
+#mainContainer {
+    display: flexbox;
+    position: relative;
+    top: 200px;
+    padding: 30px;
+    border-radius: 4px;
+    font: 1.3rem Inconsolata, monospace;
+    width: 600px;
+    height: fit-content;
+    backdrop-filter: blur(6px);
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.window {
+    position: absolute;
+    z-index: 9;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(136, 136, 136);
+    text-align: center;
+}
+
+.windowHeader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: rgb(136, 136, 136);
+}
+
+#itemList {
+    list-style: none;
+}
+
+#itemList li {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+#itemList li a {
+    color: rgb(0, 153, 255);
+    text-decoration: none;
+}
+
+#itemList li:before {
+    content: ">";
+    padding-right: 5px;
+}
+
+#socials {
+    list-style: none;
+    margin-top: 50px;
+}
+
+#socials li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#socials li a {
+    color: #888;
+    transition: color 0.5s;
+    font-size: 1.5em;
+}
+
+#socials li a:hover {
+    color: white;
+}
+
+#mainContainer h1 {
+    font-family: 1.3rem Inconsolata, monospace;
+    margin: 1px;
+    line-height: 60%;
+}
+
+#title {
+    font-family: 'Michroma', sans-serif;
+    color: violet;
+}
+
+Body {
+    background-color: black;
+    color: white;
+}
+
+;
