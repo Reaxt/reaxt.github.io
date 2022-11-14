@@ -4,8 +4,8 @@
 
 #mainContainer {
     display: flexbox;
-    position: relative;
-    top: 200px;
+    position: fixed;
+    bottom: 40%;
     padding: 30px;
     border-radius: 4px;
     font: 1.3rem Inconsolata, monospace;
@@ -22,13 +22,25 @@
     color: black;
     border: 1px solid rgb(136, 136, 136);
     text-align: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 .windowHeader {
-    padding: 10px;
+    padding: 5px 0px;
     cursor: move;
     z-index: 10;
     background-color: rgb(136, 136, 136);
+}
+
+.windowContent {
+    width: fit-content;
+    width: 400px;
+}
+
+#AboutMeWindow .windowContent {
+    left: 80%;
+    text-align: left;
 }
 
 #itemList {
