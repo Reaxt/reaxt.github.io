@@ -2,7 +2,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
     let draggers = document.querySelectorAll(".window");
     draggers.forEach(element => {
-        let head = element.getElementsByClassName("windowHeader")[0];
+        let head = element.querySelector(".windowHeader");
+        head.querySelector("button").onclick = (e) => {
+            element.classList.remove("visible");
+            element.classList.add("hidden");
+        }
+        head = head.querySelector(".headerText")
+        console.log(head);
         let startPos = { x: 0, y: 0 };
         let curPos = { x: 0, y: 0 };
         head.onmousedown = (e) => {
@@ -25,7 +31,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 head.onmouseup = null;
             }
         }
+
     });
+
+    document.querySelector("#aboutMe").onclick = (e) =>{ 
+        e.preventDefault();
+        document.querySelector("#AboutMeWindow").classList.remove("hidden");
+        document.querySelector("#AboutMeWindow").classList.add("visible");
+    }
 });
 window.onDomContentLoaded = (e) => {
 

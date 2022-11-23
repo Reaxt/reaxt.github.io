@@ -4,19 +4,23 @@
 
 #mainContainer {
     display: flexbox;
-    position: fixed;
-    bottom: 40%;
+    position: absolute;
+    bottom: 0%;
+    margin-bottom: 100px;
     padding: 30px;
     border-radius: 4px;
     font: 1.3rem Inconsolata, monospace;
-    width: 600px;
+    max-width: 600px;
+    min-width: min-content;
     height: fit-content;
     backdrop-filter: blur(6px);
     background-color: rgba(128, 128, 128, 0.4);
 }
 
 .window {
+    visibility: hidden;
     position: absolute;
+    left: 50%;
     z-index: 9;
     background-color: white;
     color: black;
@@ -25,17 +29,86 @@
     width: fit-content;
     height: fit-content;
 }
+.hidden {
+    visibility: hidden;
+    animation-name: windowClose;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes windowClose {
+    0% {
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+    }
 
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0.84);
+        
+    }
+}
+@keyframes windowAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.visible {
+    visibility: visible;
+    animation-name: windowAppear;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes windowAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 .windowHeader {
-    padding: 5px 0px;
     cursor: move;
     z-index: 10;
     background-color: rgb(136, 136, 136);
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(136, 136, 136);
+}
+.windowHeader .headerText {
+    padding: 5px 0px;
+    width: 100%;
+
+}
+.windowHeader button {
+    margin-left: auto;
+    height: 34px;
+    width: 30px;
+    border: 0px;
+    padding: 0px;
+    color: white;
+    background-color: rgb(156, 0, 0)  ;
+}
+.windowHeader button:hover{
+    background-color: rgb(255, 0, 51);
+    transition: 100ms;
+    cursor: pointer;
+}
+.windowHeader button:active {
+    background-color: rgb(117, 0, 0);
 }
 
 .windowContent {
     width: fit-content;
-    width: 400px;
+
 }
 
 #AboutMeWindow .windowContent {
@@ -97,5 +170,32 @@ Body {
     background-color: black;
     color: white;
 }
+.windowContent { 
+    overflow-y: scroll;
 
+}
+
+.consoleWindow {
+    background-color: black;
+    background-image: radial-gradient(
+      rgba(0, 150, 0, 0.75), black 120%
+    );
+    color: white;
+    font: 1.2rem Inconsolata, monospace;
+    width: fit-content;
+    max-width: 700px;
+    min-height: fit-content;
+    max-height: 700px;
+    text-shadow: 0 0 5px #C8C8C8;
+}
+.consoleWindow::after {
+    
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+}
 ;

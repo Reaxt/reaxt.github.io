@@ -23,7 +23,7 @@
             <h1>Rea Koehler</h1>
             <h3>Game developer, Programmer, Technical artist, Software Developer</h3>
             <ul id="itemList">
-                <li><a href="test">About me</a></li>
+                <li><a href="test" id="aboutMe">About me</a></li>
                 <li><a href="test">Projects</a></li>
                 <li><a href="test">Resume</a></li>
                 <li><a href="test">Technologies</a></li>
@@ -43,14 +43,23 @@
             </ul>
         </div>
         <div class="window" id="WindowTemplate" style="visibility: hidden;">
-            <div class="windowHeader">Window Title</div>
+            <div class="windowHeader"><div class="headerText">About me</div><button>X</button></div>
             <div class="windowContent">
                 meow
             </div>
         </div>
-        <div class="window" id="AboutMeWindow">
-            <div class="windowHeader">About Me</div>
+        <div class="window consoleWindow" id="AboutMeWindow">
+            <div class="windowHeader"><div class="headerText">About me</div><button>X</button></div>
             <div class="windowContent" id="AboutMeContent">
+                <div class="asciiHeader">
+  <pre>
+         __                __                   
+  ____ _/ /_  ____  __  __/ /_   ____ ___  ___  
+ / __ `/ __ \/ __ \/ / / / __/  / __ `__ \/ _ \  
+/ /_/ / /_/ / /_/ / /_/ / /_   / / / / / /  __/  
+\__,_/_.___/\____/\__,_/\__/  /_/ /_/ /_/\___/   
+  </pre>                                                                                                    
+                </div>
                 <h4>Hello! Im Rea, nice to meet you!</h4>
                 <p>I'm a versatile programmer, I work in software, game development, audio design, animation, tooling, and more! (Its an evergrowing list, I learn fast!)</p>
                 <p>I started programming by making minecraft mods when I was around 11, and have not stopped since! My first notable project being the discord bot "DadBot", you can see more of my work <a href="a">here</a></p>
