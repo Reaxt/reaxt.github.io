@@ -2,6 +2,7 @@
     padding: 50px;
 }
 
+
 #mainContainer {
     display: flexbox;
     position: absolute;
@@ -21,7 +22,7 @@
     visibility: hidden;
     position: absolute;
     left: 50%;
-    z-index: 9;
+    z-index: 1;
     background-color: white;
     color: black;
     border: 1px solid rgb(136, 136, 136);
@@ -29,6 +30,7 @@
     width: fit-content;
     height: fit-content;
 }
+
 .hidden {
     visibility: hidden;
     animation-name: windowClose;
@@ -112,10 +114,12 @@
 }
 
 #AboutMeWindow .windowContent {
-    left: 80%;
     text-align: left;
 }
-
+#ContactWindow .windowContent {
+    padding: 20px;
+    text-align: left;
+}
 #itemList {
     list-style: none;
 }
@@ -172,7 +176,8 @@ Body {
 }
 .windowContent { 
     overflow-y: scroll;
-
+    min-height: fit-content;
+    max-height: 650px;
 }
 
 .consoleWindow {
@@ -188,14 +193,29 @@ Body {
     max-height: 700px;
     text-shadow: 0 0 5px #C8C8C8;
 }
-.consoleWindow::after {
-    
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(black, 0.15),
-      rgba(black, 0.15) 1px,
-      transparent 1px,
-      transparent 2px
-    );
+
+.projectsList li {
+    list-style: none;
 }
-;
+#ProjectsWindow {
+    max-width: 1000px !important;
+    left:20%;
+}
+.projectElement {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+}
+.projectElement h3 {
+    margin: 30px;
+    padding: 0;
+    align-self: top;
+
+}
+.projectLink {
+    color: aqua;
+}
+#ResumeWindow .windowContent {
+    padding: 50px;
+}
+

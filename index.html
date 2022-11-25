@@ -1,74 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="script.js"></script>
     <title>Rea's portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="everything">
+      <div id="mainContainer">
+        <h1>Reaxt</h1>
+        <h4>aka.</h4>
+        <h1>Rea Koehler</h1>
+        <h3>
+          Game developer, Programmer, Technical artist, Software Developer
+        </h3>
+        <ul id="itemList">
+          <li><a href="test" class="openWindowButton" data-window="#AboutMeWindow">About me</a></li>
+          <li><a href="test" class="openWindowButton" data-window="#ProjectsWindow">Projects and past work</a></li>
+          <li><a href="test" class="openWindowButton" data-window="#ResumeWindow">Resume</a></li>
+          <li><a href="test" class="openWindowButton" data-window="#ContactWindow">Contact</a></li>
 
-        <div id="mainContainer">
-            <h1>Reaxt</h1>
-            <h4>aka.</h4>
-            <h1>Rea Koehler</h1>
-            <h3>Game developer, Programmer, Technical artist, Software Developer</h3>
-            <ul id="itemList">
-                <li><a href="test" id="aboutMe">About me</a></li>
-                <li><a href="test">Projects</a></li>
-                <li><a href="test">Resume</a></li>
-                <li><a href="test">Technologies</a></li>
-                <li><a href="test">Contact</a></li>
-            </ul>
-            <ul id="socials">
-                <li>
-                    <a href="https://github.com/Reaxt">
-                        <ion-icon name="logo-github"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/Reaxt1">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                </li>
-            </ul>
+        </ul>
+        <ul id="socials">
+          <li>
+            <a href="https://github.com/Reaxt">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Reaxt1">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="window" id="WindowTemplate" style="visibility: hidden;">
+        <div class="windowHeader">
+          <div class="headerText">About me</div>
+          <button>X</button>
         </div>
-        <div class="window" id="WindowTemplate" style="visibility: hidden;">
-            <div class="windowHeader"><div class="headerText">About me</div><button>X</button></div>
-            <div class="windowContent">
-                meow
-            </div>
+        <div class="windowContent">
+          meow
         </div>
-        <div class="window consoleWindow" id="AboutMeWindow">
-            <div class="windowHeader"><div class="headerText">About me</div><button>X</button></div>
-            <div class="windowContent" id="AboutMeContent">
-                <div class="asciiHeader">
-  <pre>
+      </div>
+      <div class="window consoleWindow" id="AboutMeWindow">
+        <div class="windowHeader">
+          <div class="headerText">About me</div>
+          <button>X</button>
+        </div>
+        <div class="windowContent" id="AboutMeContent">
+          <div class="asciiHeader">
+            <pre>
          __                __                   
   ____ _/ /_  ____  __  __/ /_   ____ ___  ___  
  / __ `/ __ \/ __ \/ / / / __/  / __ `__ \/ _ \  
 / /_/ / /_/ / /_/ / /_/ / /_   / / / / / /  __/  
 \__,_/_.___/\____/\__,_/\__/  /_/ /_/ /_/\___/   
-  </pre>                                                                                                    
-                </div>
-                <h4>Hello! Im Rea, nice to meet you!</h4>
-                <p>I'm a versatile programmer, I work in software, game development, audio design, animation, tooling, and more! (Its an evergrowing list, I learn fast!)</p>
-                <p>I started programming by making minecraft mods when I was around 11, and have not stopped since! My first notable project being the discord bot "DadBot", you can see more of my work <a href="a">here</a></p>
-                <p>With games, I specialise in making things look and feel cool in unique ways, excell at working under limitations, and adding polish.</p>
-                <p>In code overall, I am fully fluent in many languages, and can pick up new ones very fast! </p>
-            </div>
+  </pre
+            >
+          </div>
+          <h4>Hello! Im Rea, nice to meet you!</h4>
+          <p>
+            I'm a versatile programmer, I work in software, game development,
+            audio design, animation, tooling, and much more! (Its an evergrowing
+            list, I learn fast!)
+          </p>
+          <p>
+            I started programming by making minecraft mods when I was around 11,
+            and have not stopped since! My first notable project being the
+            discord bot "DadBot", you can see more of my work
+            <a href="test" class="openWindowButton" data-window="#ProjectsWindow">Here</a>
+          </p>
+          <p>
+            With games, I specialise in making things look and feel cool in
+            unique ways, excell at working under limitations, and adding
+            audiovisual polish.
+          </p>
+          <p>
+            I am fully fluent in many programming languages, and can pick
+            up new ones very fast!
+          </p>
         </div>
-    </div>
+      </div>
+      <div class="window consoleWindow" id="ProjectsWindow">
+        <div class="windowHeader">
+          <div class="headerText">Projects</div>
+          <button>X</button>
+        </div>
+        <div class="windowContent" id="ProjectsContent">
+          <div class="asciiHeader">
+            <pre>
+                    _         __    
+   ___  _______    (_)__ ____/ /____
+  / _ \/ __/ _ \  / / -_) __/ __(_-<
+ / .__/_/  \___/_/ /\__/\__/\__/___/
+/_/           |___/                 
+                                             
+  </pre
+            >
+          </div>
+          <ul class="projectsList">
+            <li>
+              <div class="projectElement">
+                <video width="370" height="240" autoplay muted loop>
+                  <source src="./content/vid/Splatter480p.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="projectElementDetails">
+                  <h3>Splatter</h3>
+                  <p>
+                    Splatter is a first-person shooter fever dream. <br> I worked on various unique visual effects, involving shaders, scripted animation, sound work, visual design, syncing the environment to music, and more.
+                  </p>
+                  <p><b>ROLE:</b> Technical artist, Programming, Design.</p>
+                  <p>
+                    <b>LINKS:</b>
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://store.steampowered.com/app/1768920/Splatter/"
+                      rel="noopener noreferrer"
+                      >Steam</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="projectElement">
+                <video width="370" height="240" autoplay muted loop>
+                  <source src="./content/vid/Tombstar480p.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="projectElementDetails">
+                  <h3>Tombstar</h3>
+                  <p>
+                    I worked on Tombstar leading up to release. Tombstar is a
+                    topdown, twinstick, roguelike shooter game.
+                  </p>
+                  <p>
+                    <b>ROLE:</b>Programming, Design, Sound design and audio
+                    implementation.
+                  </p>
+                  <p>
+                    <b>LINKS:</b>
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://store.steampowered.com/app/1165470/TombStar/"
+                      rel="noopener noreferrer"
+                      >Steam</a
+                    >
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://tombstar.com/"
+                      rel="noopener noreferrer"
+                      >Website</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="projectElement">
+                <video width="370" height="240" autoplay muted loop>
+                  <source src="./content/vid/RhythmThing480p.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="projectElementDetails">
+                  <h3>RhythmThing</h3>
+                  <p>
+                    RhythmThing is a personal project. It is a fully featured
+                    rhythm game with mod chart, capabilities running in CMD with
+                    a custom engine. It does many things not seen in normal
+                    games, and <i>lots</i> not seen in command line games.
+                    I have a build on this page, note this is a non-profit project, and I do not own the audio assets.
+                  </p>
+                  <p>
+                    <b>ROLE:</b>Everything except for sound and music assets.
+                  </p>
+                  <p>
+                    <b>LINKS:</b>
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://github.com/Reaxt/RhythmThing/"
+                      rel="noopener noreferrer"
+                      >Github</a
+                    >
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://youtu.be/kt9mfI8UoJs/"
+                      rel="noopener noreferrer"
+                      >Video demo</a>
+                      <a
+                        class="projectLink"
+                        target="_blank"
+                        href="./content/files/RHYTHM_THINGdemobuild.zip"
+                        rel="noopener noreferrer"
+                        >Build</a
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>              
+                <div class="projectElement">
+                <video width="370" height="240" autoplay muted loop>
+                  <source src="./content/vid/BeatSaber480p.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="projectElementDetails">
+                  <h3>Beat Saber Modding+ModCharts</h3>
+                  <p>
+                    I helped kickstart the modding scene for Beat Saber, and ran the modding discord as owner. I also made a few mods, helped with some, and made some iconic levels using said mods that changed the landscape of the game.
+                    </p>
+                    <p>
+                    Modcharts took a combination of visual design, programming, and overall understanding of sound. They where made with a combination of Blender, javascript, python, and c#.
+                </p>
+                  <p>
+                    <b>LINKS:</b>
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://discord.gg/beatsabermods/"
+                      rel="noopener noreferrer"
+                      >Discord</a
+                    >
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://youtu.be/xGICwOKNa9Y/"
+                      rel="noopener noreferrer"
+                      >NULCTRL Video (modchart)</a
+                    >
+                    <a
+                    class="projectLink"
+                    target="_blank"
+                    href="https://youtu.be/pE_s9bvntA0/"
+                    rel="noopener noreferrer"
+                    >Midnight lady Video (modchart)</a
+                  >
+                  </p>
+                </div>
+              </div></li>
+              <li>              
+                <div class="projectElement">
+                <video width="370" height="240" autoplay muted loop>
+                  <source src="./content/vid/LookAtSky480p.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="projectElementDetails">
+                  <h3>Look at the sky</h3>
+                  <p>
+                    I was commissioned by Slush Management to create a Beat Saber modchart for the song "Look at the sky" by Porter Robinson, to go alongside the release of the song, and his new album "Nurture"
+                    </p>
+                    <p>
+                        <b>ROLE:</b>All visuals.
+                      </p>
+                  <p>
+                    <b>LINKS:</b>
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://youtu.be/VWSubdP0WcQ"
+                      rel="noopener noreferrer"
+                      >Video Showcase</a
+                    >
+                    <a
+                      class="projectLink"
+                      target="_blank"
+                      href="https://beatsaver.com/maps/1421c/"
+                      rel="noopener noreferrer"
+                      >Map Download</a
+                    >
+                  </p>
+                </div>
+              </div></li>
+              <li>
+                <div class="projectElement">
+                  <video width="370" height="240" autoplay muted loop>
+                    <source src="./content/vid/Shaders480p.webm" type="video/webm" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="projectElementDetails">
+                    <h3>Shader work</h3>
+                    <p>
+                      I enjoy messing around with shader code in unity and glsl, lots of them are being used on unreleased projects, but heres a preview video of some!
+                    </p>
 
-</body>
-
+                  </div>
+                </div>
+              </li>
+              
+            <li><div class="projectElement"> <h1>And more to come!</h1></div> <div><p>Many unannounced, and NDA projects to come to this section in the future!</p><p>Have a cool project you think I would be great for? <a href =""class="projectLink openWindowButton" data-window="#ContactWindow">Hire me!</a></p></div></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="window consoleWindow" id="ContactWindow">
+        <div class="windowHeader">
+          <div class="headerText">Contact</div>
+          <button>X</button>
+        </div>
+        <div class="windowContent" >
+          <div class="asciiHeader">
+            <pre>
+  _________  _  ___________  ___________
+ / ___/ __ \/ |/ /_  __/ _ |/ ___/_  __/
+/ /__/ /_/ /    / / / / __ / /__  / /   
+\___/\____/_/|_/ /_/ /_/ |_\___/ /_/    
+            </pre>
+          </div>
+          <div>
+            <h3>Want to work together?</h3>
+            <h3>Another inquiry?</h3>
+            <h3>Just wanna chat about cool stuff?</h3>
+            
+            <div>
+                <p>If you need to reach me for any reason, here are the best ways to do so!</p>
+                <ul>
+                    <li>Email: reaxt0@gmail.com</li>
+                    <li>Discord: Reaxt#0001</li>
+                    <li>Twitter DM: <a class="projectLink" href="https://twitter.com/Reaxt1" target="_blank" rel="noopener noreferrer">@Reaxt1</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="window consoleWindow" id="ResumeWindow">
+            <div class="windowHeader">
+              <div class="headerText">Resume</div>
+              <button>X</button>
+            </div>
+            <div class="windowContent" >
+              <div class="asciiHeader">
+                <pre>
+   ___  __________  ____  _______
+  / _ \/ __/ __/ / / /  |/  / __/
+ / , _/ _/_\ \/ /_/ / /|_/ / _/  
+/_/|_/___/___/\____/_/  /_/___/  
+                                 
+                </pre>
+              </div>
+              <div>
+                <h3>Resume PDF Files</h3>
+                
+                <div>
+                    <ul>
+                        <li><a class="projectLink" href="./content/files/Rea_Resume_English.pdf" target="_blank" rel="noopener noreferrer">English.pdf</a></li>
+                        <li><a class="projectLink" href="./content/files/Rea_Resume_French.pdf" target="_blank" rel="noopener noreferrer">French.pdf</a></li>
+                        <li><a class="projectLink" href="./content/files/Rea_Resume_Combined.pdf" target="_blank" rel="noopener noreferrer">Combined.pdf</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            </div>
+  </body>
 </html>

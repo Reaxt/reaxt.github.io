@@ -1,3 +1,4 @@
+let z = 9;
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
     let draggers = document.querySelectorAll(".window");
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let startPos = { x: 0, y: 0 };
         let curPos = { x: 0, y: 0 };
         head.onmousedown = (e) => {
+            element.style.zIndex = z++;
             e = e || window.event;
             e.preventDefault();
             startPos.x = e.clientX;
@@ -34,11 +36,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     });
 
-    document.querySelector("#aboutMe").onclick = (e) =>{ 
-        e.preventDefault();
-        document.querySelector("#AboutMeWindow").classList.remove("hidden");
-        document.querySelector("#AboutMeWindow").classList.add("visible");
-    }
+    document.querySelectorAll(".openWindowButton").forEach(e => {
+        e.onclick = (e) => {
+            e.preventDefault();
+
+            let window = document.querySelector(e.target.dataset.window);
+            window.classList.remove("hidden");
+            window.classList.add("visible");
+            window.style.zIndex = z++;
+        }
+    })
+
 });
 window.onDomContentLoaded = (e) => {
 
