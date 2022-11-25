@@ -1,5 +1,15 @@
 let z = 9;
+let writeCursor = false;
+
+function cursorFunc() {
+    setTimeout(()=> {
+        writeCursor = !writeCursor;
+        WriteConsoleText();
+        cursorFunc();
+    }, 500)
+}
 window.addEventListener('DOMContentLoaded', (event) => {
+    cursorFunc();
     console.log('DOM fully loaded and parsed');
     let draggers = document.querySelectorAll(".window");
     draggers.forEach(element => {
@@ -7,6 +17,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         head.querySelector("button").onclick = (e) => {
             element.classList.remove("visible");
             element.classList.add("hidden");
+            elementClicked(e);
         }
         head = head.querySelector(".headerText")
         console.log(head);
@@ -44,10 +55,59 @@ window.addEventListener('DOMContentLoaded', (event) => {
             window.classList.remove("hidden");
             window.classList.add("visible");
             window.style.zIndex = z++;
+            elementClicked(e);
         }
     })
 
 });
+let consoleText = [""];
+let writing = false;
+function AddConsoleText(message) {
+    let msgSplit = message.split('');
+    writing = true;
+    consoleStep(msgSplit, 0, consoleText.length-1);
+}
+function consoleStep(message, i, arrayIndex) {
+    if(i < message.length) {
+        WriteConsoleText();
+        consoleText[arrayIndex] = consoleText[arrayIndex] + message[i];
+        setTimeout(() => {
+            consoleStep(message, i+1, arrayIndex);
+            
+        }, 10)
+    } else {
+        consoleText.push("");
+        WriteConsoleText();
+        writing = false;
+        if(consoleText.length>10) {
+            consoleText.shift()
+        }
+
+    }
+
+}
+function WriteConsoleText(){
+    let elm = document.querySelector("#consoleText");
+    let text = "";
+    for (let i = 0; i < consoleText.length-1; i++) {
+        text = text += "Reaxt: ~/ "
+        text += consoleText[i];
+        text += "<br>"
+    }
+    text = text += "Reaxt: ~/ ";
+    text += consoleText[consoleText.length-1];
+    if(writeCursor || writing) {
+        console.log(writeCursor);
+        text += "█"
+    }
+    elm.innerHTML = text;
+}
+function elementClicked(elm) {
+    
+    if(elm.target.dataset.consoletext) {
+        AddConsoleText(elm.target.dataset.consoletext);
+    }
+}
 window.onDomContentLoaded = (e) => {
 
 
