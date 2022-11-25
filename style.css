@@ -1,8 +1,37 @@
+/* Works on Firefox */
+
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(78, 78, 78);
+    border-radius: 20px;
+  }
 #everything {
     padding: 50px;
+    z-index: 2;
 }
 
-
+#consoleText {
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    color: rgb(0, 255, 13);
+    position: fixed; /* Sit on top of the page content */
+    /* Hidden by default */
+   width: 100%; /* Full width (cover the whole page) */
+   height: 100%; /* Full height (cover the whole page) */
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}
 #mainContainer {
     display: flexbox;
     position: absolute;
@@ -13,6 +42,7 @@
     font: 1.3rem Inconsolata, monospace;
     max-width: 600px;
     min-width: min-content;
+    z-index: 2;
     height: fit-content;
     backdrop-filter: blur(6px);
     background-color: rgba(128, 128, 128, 0.4);
@@ -25,7 +55,6 @@
     z-index: 1;
     background-color: white;
     color: black;
-    border: 1px solid rgb(136, 136, 136);
     text-align: center;
     width: fit-content;
     height: fit-content;
@@ -81,21 +110,27 @@
     cursor: move;
     z-index: 10;
     background-color: rgb(136, 136, 136);
-    display: flex;
     width: 100%;
-    border: 1px solid rgb(136, 136, 136);
+    height: 30px;
+    padding: 0;
+    margin:0;
+    
 }
 .windowHeader .headerText {
-    padding: 5px 0px;
+    padding: 0px 0px;
     width: 100%;
+    margin-top: 3.5px;
+    position: absolute;
 
 }
 .windowHeader button {
-    margin-left: auto;
-    height: 34px;
-    width: 30px;
+    display: block;
+    right:0;
+    position: absolute;
     border: 0px;
     padding: 0px;
+    width: 30px;
+    height: 30px;
     color: white;
     background-color: rgb(156, 0, 0)  ;
 }
@@ -132,7 +167,7 @@
 
 #itemList li a {
     color: rgb(0, 153, 255);
-    text-decoration: none;
+    text-decoration:underline;
 }
 
 #itemList li:before {
@@ -176,7 +211,7 @@ Body {
     color: white;
 }
 .windowContent { 
-    overflow-y: scroll;
+    overflow-y:scroll;
     min-height: fit-content;
     max-height: 650px;
 }
@@ -195,17 +230,22 @@ Body {
     text-shadow: 0 0 5px #C8C8C8;
 }
 
+.projectsList {
+    padding: 40px;
+}
 .projectsList li {
     list-style: none;
 }
 #ProjectsWindow {
-    max-width: 1000px !important;
-    left:20%;
+    max-width: 1200px !important;
+    left:0%;
+    right:0%;
 }
 .projectElement {
     display: flex;
     align-items: center;
     border-top: 1px solid white;
+    margin: 0px 5px;
 }
 .projectElement h3 {
     margin: 30px;
@@ -213,10 +253,14 @@ Body {
     align-self: top;
 
 }
+.projectElementDetails {
+    margin-left: 15px;
+}
 .projectLink {
     color: aqua;
 }
 #ResumeWindow .windowContent {
     padding: 50px;
 }
+
 

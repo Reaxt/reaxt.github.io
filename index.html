@@ -17,6 +17,8 @@
   </head>
 
   <body>
+    <div id="overlay"></div>
+    <p id="consoleText"></p>
     <div id="everything">
       <div id="mainContainer">
         <h1>Rea Koehler</h1>
@@ -26,10 +28,10 @@
           Game developer, Programmer, Technical artist, Software Developer
         </h3>
         <ul id="itemList">
-          <li><a href="aboutMe" class="openWindowButton" data-window="#AboutMeWindow">About me</a></li>
-          <li><a href="projects" class="openWindowButton" data-window="#ProjectsWindow">Projects and past work</a></li>
-          <li><a href="resume" class="openWindowButton" data-window="#ResumeWindow">Resume</a></li>
-          <li><a href="contact" class="openWindowButton" data-window="#ContactWindow">Contact</a></li>
+          <li><a href="aboutMe" class="openWindowButton" data-window="#AboutMeWindow" data-consoleText="cat ./aboutme.txt">About me</a></li>
+          <li><a href="projects" class="openWindowButton" data-window="#ProjectsWindow" data-consoleText="browse ./projects.html">Projects and past work</a></li>
+          <li><a href="resume" class="openWindowButton" data-window="#ResumeWindow" data-consoleText="cat ./resume.txt">Resume</a></li>
+          <li><a href="contact" class="openWindowButton" data-window="#ContactWindow" data-consoleText="cat ./contact.txt">Contact</a></li>
 
         </ul>
         <ul id="socials">
@@ -57,7 +59,8 @@
       <div class="window consoleWindow" id="AboutMeWindow">
         <div class="windowHeader">
           <div class="headerText">About me</div>
-          <button>X</button>
+          
+          <button data-consoletext="pkill aboutme">X</button>
         </div>
         <div class="windowContent" id="AboutMeContent">
           <div class="asciiHeader">
@@ -94,7 +97,7 @@
       <div class="window consoleWindow" id="ProjectsWindow">
         <div class="windowHeader">
           <div class="headerText">Projects</div>
-          <button>X</button>
+          <button data-consoletext="pkill projects">X</button>
         </div>
         <div class="windowContent" id="ProjectsContent">
           <div class="asciiHeader">
@@ -310,7 +313,7 @@
       <div class="window consoleWindow" id="ContactWindow">
         <div class="windowHeader">
           <div class="headerText">Contact</div>
-          <button>X</button>
+          <button data-consoletext="pkill contact">X</button>
         </div>
         <div class="windowContent" >
           <div class="asciiHeader">
@@ -340,7 +343,7 @@
         <div class="window consoleWindow" id="ResumeWindow">
             <div class="windowHeader">
               <div class="headerText">Resume</div>
-              <button>X</button>
+              <button data-consoletext="pkill resume">X</button>
             </div>
             <div class="windowContent" >
               <div class="asciiHeader">
