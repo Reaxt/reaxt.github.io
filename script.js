@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             e.preventDefault();
             startPos.x = e.clientX;
             startPos.y = e.clientY;
-            head.onmousemove = (e) => {
+            document.onmousemove = (e) => {
                 e = e || window.event;
                 e.preventDefault();
                 curPos.x = startPos.x - e.clientX;
@@ -29,8 +29,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 element.style.left = (element.offsetLeft - curPos.x) + "px";
             }
             head.onmouseup = (e) => {
-                head.onmousemove = null;
-                head.onmouseup = null;
+                document.onmousemove = null;
+                document.onmouseup = null;
             }
         }
 
