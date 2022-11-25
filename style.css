@@ -115,6 +115,7 @@
 
 #AboutMeWindow .windowContent {
     text-align: left;
+    padding: 20px;
 }
 #ContactWindow .windowContent {
     padding: 20px;
